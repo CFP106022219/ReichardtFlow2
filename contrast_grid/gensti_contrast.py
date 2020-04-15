@@ -27,8 +27,8 @@ if __name__ == '__main__':
     # print ((vrange[-1]))
     # print (max(vrange[-1], 3))
     num = 0
-    velo_p = -2
-    wx = 2
+    velo_p = -2  
+    wx = 2 #波長
     for contrast in (0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0):
         for wx in np.arange(3,6):
             velo = 2.0 ** velo_p
