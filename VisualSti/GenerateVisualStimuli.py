@@ -2,7 +2,6 @@
 import numpy as np
 import cv2 as cv
 import matplotlib.pyplot as plt
-from numba import autojit
 # from VisualSti import borst as bs
 import pandas as pd
 import pickle
@@ -34,7 +33,7 @@ class sti:
         # genavi pareter
         # self.avifname = 'out.avi'
 
-    @autojit
+
     def singrat(self):
         self.angl = (self.degr/180)*np.pi
         self.Vdgr = self.angl
@@ -69,7 +68,7 @@ class sti:
         gc.collect()
         return self.movie
 
-    @autojit
+
     # rightward only 
     def gradient(self):
         self.angl = (self.degr/180)*np.pi
@@ -188,7 +187,6 @@ class sti:
         gc.collect()
         return self.movie
 
-    @autojit
     def singrat_uint8(self):
         self.Vx = self.V*np.cos(self.Vdgr)
         self.Vy = self.V*np.sin(self.Vdgr)
